@@ -1,0 +1,627 @@
+.Home {
+  text-align: center;
+
+}
+
+.page {
+  width: 70%; /* 화면 너비의 70%로 설정 */
+  margin: 0 auto; /* 가운데 정렬을 위해 margin을 자동으로 설정 */
+}
+
+
+/*header*/
+.header {
+  background-color: rgb(47, 82, 60);
+  display: flex;
+  justify-content: space-between; /* 요소들을 헤더의 양 끝에 배치합니다 */
+  align-items: center;
+  max-width: 100%;
+  padding: 10px 70px;
+}
+
+.logo {
+  margin-left: 30px;
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+
+
+.mypage {
+  color: rgb(214, 230, 204);
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+/*LINK 색 밑줄 변경 해결*/
+.mypage a {
+  color: inherit; /* 부모 요소의 색상을 상속받아 색상을 유지합니다 */
+  text-decoration: none; /* 밑줄을 없앱니다 */
+}
+
+.alarm {
+  margin-left: auto; /* 오른쪽으로 밀어넣기 위해 왼쪽 여백을 자동으로 설정합니다 */
+  color: rgb(214, 230, 204);
+  margin-right: 30px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.alarm:hover .dropdown {
+  display: block;
+}
+
+/* Dropdown이 보여질 때 */
+/* Dropdown이 보여질 때 */
+.dropdown {
+  color:#000000;
+  display: none;
+  position: absolute;
+  top: 100%; /* Dropdown이 아이콘 아래에 위치하도록 설정합니다. */
+  right: 0; /* 필요에 따라 위치 조정 가능합니다. */
+  width: 400px; /* 너비를 400px로 고정합니다. */
+  max-height: 700px; /* 최대 높이를 700px로 설정합니다. */
+  overflow-y: auto; /* 세로 스크롤이 필요할 때만 스크롤이 나타나도록 설정합니다. */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1000; /* 다른 요소 위에 보이도록 설정합니다. */
+}
+
+.notification {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.notification:hover {
+  background-color: #f0f0f0;
+}
+
+/*options*/
+.options {
+  padding-left: 170px;
+  border-color: black;
+  padding-top: 30px;
+}
+
+.options_a {
+  display: flex;
+}
+
+.opt_bulletinBoard,
+.opt_mentorMentee {
+  margin-right: 50px; /* 각 버튼 사이에 마진을 조절하세요 */
+  color: gray; /* 초기 상태의 글자 색은 회색으로 설정 */
+  cursor: pointer; /* 포인터로 커서를 변경하여 클릭 가능함을 나타냅니다. */
+}
+
+.opt_bulletinBoard:hover,
+.opt_mentorMentee:hover {
+  color: black; /* 마우스 호버 시 글자 색을 검정색으로 변경 */
+}
+.opt_bulletinBoard.active,
+.opt_mentorMentee.active {
+  color: black; /* 선택된 버튼의 글자 색을 검정색으로 지정합니다. */
+}
+
+/*bulletinBoardContent*/
+.bulletinBoardContent,
+.mentorMenteeContent {
+  background-color: rgb(245, 245, 245);
+  max-width: 100%;
+}
+.btn_bulletin{
+  background-color: white;
+  border-radius: 10%;
+  border-color:rgb(47, 82, 60);
+  margin: 70px 30px;
+}
+.btn_bulletin:hover{
+  transform: translateY(-3px); /* 2px만큼 위로 이동하도록 설정 (원하는 값으로 조절 가능) */
+  transition: transform 0.2s ease; /* 부드럽게 애니메이션 적용 */
+  cursor: pointer;
+}
+.btn_mentorMentee{
+  background-color: white;
+  border-radius: 10%;
+  /* border-color:rgb(47, 82, 60); */
+  margin: 70px 30px;
+}
+.btn_mentorMentee:hover{
+  transform: translateY(-3px); /* 2px만큼 위로 이동하도록 설정 (원하는 값으로 조절 가능) */
+  transition: transform 0.2s ease; /* 부드럽게 애니메이션 적용 */
+  cursor: pointer;
+}
+.img_bulletin {
+  width: 250px;
+  height: 200px;
+  margin-top: 10px;
+}
+.text_bulletin {
+  padding: 10px 0px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/*mentorMenteeContent*/
+
+
+/*BulletinList.js*/
+.top_opt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 20px;
+}
+
+.bulletinName {
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: white;
+  font-weight: 900;
+  font-size: larger;
+}
+
+.Search {
+  display: flex;
+  align-items: center; /* 세로 가운데 정렬 */
+  margin-left: auto; /* 오른쪽으로 이동 */
+  margin-right: 20px;
+}
+
+.searchWord {
+  padding: 14px 20px;
+  border-radius: 30px 0px 0px 30px;
+  border: 2px solid black;
+  width: 300px;
+}
+
+.BtnSearch {
+  background-color: black;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 0px 30px 30px 0px;
+  border: 2px solid black;
+  margin-left: -2px; /* 왼쪽 버튼과의 간격 보정 */
+  cursor: pointer;
+}
+
+.btnWriting {
+  background-color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 2px solid rgb(47, 82, 60);
+  cursor: pointer;
+  font-weight: 900;
+  font-size: larger;
+}
+
+
+.bulletinList {
+  border: 1px solid #ccc;
+}
+
+.bulletinIndex {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  background-color: rgb(47, 82, 60);
+  color: white;
+  padding: 10px 0px;
+  padding-right: 15px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.title {
+  flex: 60;
+  text-align: center;
+}
+
+.date {
+  flex: 25;
+  text-align: center;
+}
+
+.views {
+  flex: 15;
+  text-align: center;
+}
+
+.bulletinContent {
+/*내에서 스크롤 설정
+  max-height: 400px;
+  overflow-y: auto;*/
+  padding: 0px 20px 20px 20px;
+}
+
+.contentItem {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.contentTitle {
+  flex: 60;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.contentDate {
+  flex: 25;
+  text-align: center;
+  padding-right: 5px;
+}
+
+.contentViews {
+  flex: 15;
+  text-align: center;
+}
+/* Home.css */
+/* ... 기존 CSS 코드 ... */
+
+.pagination {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination span {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination span.active {
+  font-weight: bold;
+  color: rgb(47, 82, 60);
+}
+
+
+/*Writing.js*/
+
+.writingPage {
+  margin: 0 auto;
+  padding: 20px 50px;
+
+  border: 2px solid #000000; /* 테두리 추가 */
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: left;
+  
+}
+
+
+input[type='text'],
+textarea,
+input[type='file'] {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.Writing_Button {
+  padding: 10px 20px;
+  background-color: rgb(47, 82, 60);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+
+.writeHeading {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.imagePreview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.imageUploadContainer {
+  display: flex; /* 요소들을 가로로 배열 */
+  flex-wrap: wrap; /* 공간이 부족하면 다음 줄로 넘어감 */
+}
+
+.imageBox {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+}
+
+
+.imageLabel {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #ccc;
+  box-sizing: border-box;
+  background-color: #f0f0f0; /* 회색 배경색 */
+}
+
+.plus {
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 80px;
+  margin-top: 10px;
+}
+.imageplus {
+  text-align: center;
+  color: #bdbdbd;
+}
+
+/*Post.js*/
+.page-post{
+  width: 70%; /* 화면 너비의 70%로 설정 */
+  margin: 0 auto; /* 가운데 정렬을 위해 margin을 자동으로 설정 */
+  padding-bottom: 100px;
+}
+
+.postPage {
+  margin: 0 auto;
+  padding:  30px 50px 20px 50px;
+  align-items: flex-start; /* 내부 요소들을 왼쪽 정렬 */
+  border: 1px solid #686868; /* 테두리 추가 */
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  
+}
+
+.author-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  margin-right: 15px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.author-details{
+  display: flex;
+  flex-direction: column;
+}
+.author-details p {
+  margin: 0;
+  
+  align-self: flex-start; /* 왼쪽 정렬 */
+}
+.user-name {
+  font-weight: bold;
+}
+.post-date {
+  font-weight: normal; /* bold가 아닌 일반 폰트로 변경 */
+}
+
+/* 게시글 제목 */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left; /* 텍스트도 왼쪽 정렬 */
+}
+
+/* 게시글 내용 */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: left; /* 텍스트도 왼쪽 정렬 */
+}
+
+/* 이미지 갤러리 */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* 이미지를 왼쪽 정렬 */
+}
+
+.image-gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* 좋아요, 댓글 기능 */
+.interactions {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.interactions button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.interactions button:hover {
+  background-color: #0056b3;
+}
+
+.interactions p {
+  margin: 0;
+  margin-right: 15px;
+}
+
+/* Home.css */
+
+/* 모달 스타일 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  padding:5px;
+
+}
+
+.modal-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+/* Home.css */
+
+/* 댓글 스타일 */
+.comments {
+  margin-top: 20px;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+
+.comment img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.comment-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-user {
+  font-weight: bold;
+  margin: 0;
+}
+
+.comment-date {
+  color: #666;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.comment-content {
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  margin-left: 10px;
+}
+
+.comment-form {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+.comment-input {
+  display: flex;
+  align-items: flex-start;
+}
+
+.comment-input textarea {
+  width: calc(100% - 100px);
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.comment-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 20px;
+
+}
+
+
+/*mypage.js*/
+.mypage-list {
+  border: 1px solid #ccc;
+}
+
+.mypage-name {
+
+  margin-left:30px;
+  font-weight: 900;
+  font-size:x-large;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Adjust the space between buttons */
+  padding: 50px 200px;
+
+}
+
+.mypage-button {
+  padding: 10px 20px;
+  background-color: #dbdbdb;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: x-large;
+  border: 1px solid #000000; /* 테두리 추가 */
+
+}
+.mypage-button:hover{
+  transform: translateY(-2px); /* 2px만큼 위로 이동하도록 설정 (원하는 값으로 조절 가능) */
+  transition: transform 0.2s ease; /* 부드럽게 애니메이션 적용 */
+  cursor: pointer;
+}

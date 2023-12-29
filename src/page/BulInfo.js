@@ -144,7 +144,7 @@ const BulFree = () => {
       <div className="page">
         <div className="bulletinBoardContent">
           <div className="top_opt">
-            <div className="bulletinName">자유 게시판</div>
+            <div className="bulletinName">정보 게시판</div>
             <div className="Search">
               <input type="search" 
                      className='searchWord' 

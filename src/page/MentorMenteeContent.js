@@ -5,6 +5,7 @@ import mentee from './img/mentee.png';
 const MentorMenteeContent = () => {
   return (
     <div className="page">
+      
       <div className="mentorMenteeContent">
         <button className="btn_mentorMentee">
           <img className="img_bulletin" src={mentor}></img>

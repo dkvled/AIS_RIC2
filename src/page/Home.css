@@ -8,6 +8,20 @@
   margin: 0 auto; /* 가운데 정렬을 위해 margin을 자동으로 설정 */
 }
 
+.linkStyle {
+  text-decoration: none;
+}
+.linkStyle2 {
+  text-decoration: none;
+  color:#000000;
+}
+.linkStyle3 {
+  color:#6d6d6d;
+}
+.linkStyle4 {
+  color:#ff0000;
+  font-size: 20px;
+}
 
 /*header*/
 .header {
@@ -144,7 +158,9 @@
   padding: 10px 0px;
   font-size: 30px;
   font-weight: bold;
+  color: #000000; /* 텍스트 색상 설정 */
 }
+
 
 /*mentorMenteeContent*/
 
@@ -624,4 +640,88 @@ p {
   transform: translateY(-2px); /* 2px만큼 위로 이동하도록 설정 (원하는 값으로 조절 가능) */
   transition: transform 0.2s ease; /* 부드럽게 애니메이션 적용 */
   cursor: pointer;
+}
+
+/*ModifyProfile.js*/
+
+/* CSS 예시 - 스타일을 수정해 원하시는 디자인으로 변경하세요 */
+.profile-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+}
+
+.Modify-img{
+  margin-bottom: 40px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+.BtnModify {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.BtnModify {
+  background-color: rgb(47, 82, 60);
+  color: white;
+  cursor: pointer;
+  margin-left:150px;
+  font-size: 30px; /* 레이블 폰트 크기 조정 */
+  font-weight: bolder;
+  margin-top: 50px;
+}
+
+input[type='file'] {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+/* 프로필 사진 */
+input[type='file']::file-selector-button {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+input[type='file']::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-wrapper label {
+  margin-right: 10px;
+  width: 170px;
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 25px; /* 레이블 폰트 크기 조정 */
+
+}
+
+.input-wrapper input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 400px;
+  font-size: 25px; /* 레이블 폰트 크기 조정 */
 }

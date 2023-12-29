@@ -9,18 +9,22 @@ const BulletinBoardContent = () => {
     <div className="page">
       <div className="bulletinBoardContent">
         <button className="btn_bulletin">
-        <Link to="/page/BulFree">
-          <img className="img_bulletin" src={farm}></img>
-          <div className="text_bulletin">자유 게시판</div>
+          <Link to="/page/BulFree" className="linkStyle">
+            <img className="img_bulletin" src={farm} alt="Farm"></img>
+            <div className="text_bulletin">자유 게시판</div>
           </Link>
         </button>
         <button className="btn_bulletin">
-          <img className="img_bulletin" src={information}></img>
-          <div className="text_bulletin">정보 게시판</div>
+          <Link to="/page/BulInfo" className="linkStyle">
+            <img className="img_bulletin" src={information} alt="Information"></img>
+            <div className="text_bulletin">정보 게시판</div>
+          </Link>
         </button>
         <button className="btn_bulletin">
-          <img className="img_bulletin" src={event}></img>
-         <div className="text_bulletin">이벤트 게시판</div>
+          <Link to="/page/BulEvent" className="linkStyle">
+            <img className="img_bulletin" src={event} alt="Event"></img>
+            <div className="text_bulletin">이벤트 게시판</div>
+          </Link>
         </button>
       </div>
     </div>

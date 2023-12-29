@@ -9,9 +9,7 @@ const Options = ({ selectedOption, handleOptionClick }) => {
               className={`opt_bulletinBoard ${selectedOption === 'bulletinBoard' ? 'active' : ''}`}
               onClick={() => handleOptionClick('bulletinBoard')}
             >
-              <Link to="/">
-                게시판
-              </Link>
+              게시판
             </h2>
             <h2
               className={`opt_mentorMentee ${selectedOption === 'mentorMentee' ? 'active' : ''}`}

@@ -15,6 +15,8 @@ import ModifyProfile from './page/ModifyProfile'
 import MypageLike from './page/MypageLike'
 import MypagePost from './page/MypagePost'
 import Writing2 from './page/Writing2'
+import SignUpMentor from './page/SignUpMentor';
+import SignUpMentee from './page/SignUpMentee';
 
 
 const App = () => {
@@ -38,6 +40,8 @@ const App = () => {
           <Route path="/page/BulEvent" element={<BulEvent/>} />
           <Route path="/page/Writing" element={<Writing/>} />
           <Route path="/page/Post" element={<Post/>} />
+          <Route path="/page/SignUpMentor" element={<SignUpMentor/>} />
+          <Route path="/page/SignUpMentee" element={<SignUpMentee/>} />
           <Route path="/page/Mypage" element={<Mypage/>} />
           <Route path="/page/ModifyProfile" element={<ModifyProfile/>} />
           <Route path="/page/MypageLike" element={<MypageLike/>} />

@@ -5,7 +5,7 @@ import profile from './img/a.png';
 const Post = () => {
   //댓글사용자정보
   const currentUser = {
-    profileImage: 'https://image.idus.com/image/files/24d59455f8654d8f8a9f766596713f74_1440.png', // 사용자 프로필 사진 URL
+    profileImage: 'https://www.palnews.co.kr/news/photo/202010/203411_43193_327.jpg', // 사용자 프로필 사진 URL
     userName: '천재농부', // 사용자 이름
   };
 
@@ -13,13 +13,18 @@ const Post = () => {
   const [userData, setUserData] = useState({
     profileImage: 'https://www.palnews.co.kr/news/photo/202010/203411_43193_327.jpg',
     userName: '천재농부',
-    postDate: '10월 21일',
-    postTitle: '농사 잘하는 법좀 ㅠㅠ',
-    postContent: '농사 너무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주세요무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주',
+    postDate: '12월 31일',
+    postTitle: '복숭아 따기 축제',
+    postContent: '제 과수원에 복숭아가 많이 남아서 복숭아 따기 축제를 개최합니다.',
+    postContent2: '날짜: 2024.1.2 ~ 2024.1.20',
+    postContent3: '위치: 청도군 화양읍 범곡리11',
+    postContent4: '참가비: 10000원',
+    postContent5: '많은 참여 부탁드립니다:>',
+
     photos: [
+      'https://health.chosun.com/site/data/img_dir/2023/06/01/2023060101900_0.jpg',
       'https://www.100ssd.co.kr/news/photo/202307/100261_80090_553.jpg',
-      'https://mono.aks.ac.kr/s/media/0b/0b49ff76-7228-4c5a-8e64-18138a205933.jpg?preset=page',
-      'http://www.jadam.kr/news/photo/200910/5841_7727_3726.jpg',
+      'https://sanghafarm.co.kr/sanghafarm_Data/upload/shop/product/202309/C0009537_2023090810423105885.jpg',
     ],
     likeCount: 0,
     commentCount: 0,
@@ -114,6 +119,10 @@ const Post = () => {
 
           {/* 게시글 내용 */}
           <p>{userData.postContent}</p>
+          <p>{userData.postContent2}<br/>
+          {userData.postContent3}<br/>
+          {userData.postContent4}</p>
+          <p>{userData.postContent5}</p>
 
           {/* 사진 일렬로 표시 */}
           <div className="image-gallery">

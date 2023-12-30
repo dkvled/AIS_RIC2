@@ -13,8 +13,8 @@ const MypagePost = () => {
   const posts = [
     {
       id: 1,
-      title: '위 코드는 게시판 페이',
-      date: '2023-01-15',
+      title: '복숭아 따기 축제',
+      date: '2023-12-31',
     },
     {
       id: 2,

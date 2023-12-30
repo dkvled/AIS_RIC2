@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Home.css';
 
 const Writing2 = () => {
-  const [title, setTitle] = useState('농사 잘하는 법좀 ㅠㅠ'); // 초기값 '안녕하세요' 설정
-  const [content, setContent] = useState('농사 너무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주세요무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주무 어렵당 ~ 농사 잘하는 분들 농기구 빌려주'); // 초기값 'asdfadf' 설정
+  const [title, setTitle] = useState('복숭아 따기 축제'); // 초기값 '안녕하세요' 설정
+  const [content, setContent] = useState('제 과수원에 복숭아가 많이 남아서 복숭아 따기 축제를 개최합니다.  날짜: 2024.1.2 ~ 2024.1.20 위치: 청도군 화양읍 범곡리11 참가비: 10000원 많은 참여 부탁드립니다:>'); // 초기값 'asdfadf' 설정
   const [images, setImages] = useState([ ]);
   
 

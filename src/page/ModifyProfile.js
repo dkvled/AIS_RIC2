@@ -32,6 +32,7 @@ const ModifyProfile = () => {
             <div className="input-wrapper">
                 <label>닉네임</label>
                 <input
+                className='modify-input'
                 type="text"
                 value={nickname}
                 onChange={(e) => setNickname(e.target.value)}
@@ -40,6 +41,7 @@ const ModifyProfile = () => {
             <div className="input-wrapper">
                 <label>상태 메세지</label>
                 <input
+                className='modify-input'
                 type="text"
                 value={statusMessage}
                 onChange={(e) => setStatusMessage(e.target.value)}
@@ -49,6 +51,7 @@ const ModifyProfile = () => {
                 <label>전화번호</label>
                 <input
                 type="text"
+                className='modify-input'
                 value={phoneNumber}
                 />
             </div>
@@ -63,6 +66,7 @@ const ModifyProfile = () => {
             <div className="input-wrapper">
                 <label>비밀번호</label>
                 <input
+                className='modify-input'
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -71,6 +75,7 @@ const ModifyProfile = () => {
             <div className="input-wrapper">
                 <label>비밀번호 수정</label>
                 <input
+                className='modify-input'
                 type="password"
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}

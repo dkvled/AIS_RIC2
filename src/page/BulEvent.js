@@ -13,9 +13,9 @@ const BulFree = () => {
   const posts = [
     {
       id: 1,
-      title: '위 코드는 게시판 페이',
-      date: '2023-01-15',
-      views: 25,
+      title: '복숭아 따기 축제',
+      date: '2023-12-31',
+      views: 0,
     },
     {
       id: 2,
@@ -79,7 +79,7 @@ const BulFree = () => {
     },
     {
       id: 12,
-      title: '다만 디자인에 따라 ',
+      title: '복숭아 이벤트 ',
       date: '2023-11-27',
       views: 2,
     },
@@ -97,7 +97,7 @@ const BulFree = () => {
     },
     {
       id: 15,
-      title: '. 게시글의 제목, 작성 ',
+      title: '복숭아 대회',
       date: '2023-01-05',
       views: 83,
     },

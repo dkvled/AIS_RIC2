@@ -660,9 +660,7 @@ p {
 
 }
 
-input[type='text'],
-input[type='password'],
-input[type='email'],
+.modify-input,
 .BtnModify {
   margin-bottom: 10px;
   padding: 8px;
@@ -724,4 +722,59 @@ input[type='file']::-webkit-file-upload-button {
   border: 1px solid #ccc;
   width: 400px;
   font-size: 25px; /* 레이블 폰트 크기 조정 */
+}
+
+/*SignUpMentor.js*/
+.SignUp-list {
+  border: 1px solid #ccc;
+}
+
+.SignUp-Content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Adjust the space between buttons */
+  padding: 50px 200px;
+
+}
+
+.SignUp-Content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.SignUp-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+
+.SignUp-select,
+.SignUp-textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.SignUp-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(47, 82, 60);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.SignUp-button:hover {
+  background-color: rgb(32, 56, 41);
 }
